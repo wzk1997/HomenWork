@@ -34,9 +34,9 @@ def regist(req):
         m.save()
     return render(req, 'myblog/register_success.html')
 
-def list(req):
+def article_list(req):
     pass
 
-def detail(req):
+def article_detail(req):
     pass
 # Create your views here.

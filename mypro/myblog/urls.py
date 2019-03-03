@@ -22,5 +22,7 @@ urlpatterns = [
     url(r'^index/', views.index, name='index'),
     url(r'^login', views.login, name='login'),
     url(r'^register/', views.regist, name='register'),
+    url(r'^article_list/',views.article_list,name='article_list'),
+    url(r'article_detail/',views.article_detail,name='article_detail'),
 
 ]
