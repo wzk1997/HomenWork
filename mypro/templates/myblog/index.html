@@ -5,14 +5,17 @@
     <title>博客首页</title>
 </head>
 <body>
-<div align="center">
+<form action="">
+    <div align="center">
     {% csrf_token %}
     <h1>博客首页</h1>
+
+    <a href="{% url 'myblog:article_list' %}">文章列表</a><br>
+    <a href="{% url 'myblog:article_detail' %}">文章详情</a><br>
+    <a href="{% url 'myblog:article' %}">编辑文章</a>
 </div>
-<div>
-    <a href="{% url 'myblog:article_list' %}">文章列表</a>
-    <a href="{% url 'myblog:article_detail' %}">文章详情</a>
-</div>
+</form>
+
 
 </body>
 </html>

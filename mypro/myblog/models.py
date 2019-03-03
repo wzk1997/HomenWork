@@ -21,7 +21,7 @@ class User(models.Model):
 
 class Article(models.Model):
     id = models.AutoField(primary_key=True)
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=20)
     coutext = models.TextField()
     author = models.TextField(User)
 
