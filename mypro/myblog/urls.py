@@ -26,5 +26,7 @@ urlpatterns = [
     url(r'^article/',views.article,name='article'),
     url(r'^article_list/',views.article_list,name='article_list'),
     url(r'article_detail/',views.article_detail,name='article_detail'),
+    url(r'^addutils/',views.addutils,name='addutils'),
+    url(r'^jsontext/',views.jsontext,name='jsontext'),
 
 ]

@@ -15,19 +15,22 @@
             </tr>
 
             <tr>
-                <td> 请输入作者：<input type="text" autocomplete="off" name="author"></td>
-            </tr>
-
-            <tr>
                 <td><textarea name="coutext" id="" cols="40" rows="10" placeholder="请输入文章内容"></textarea></td>
             </tr>
-
             <tr>
                 <td><input type="submit"></td>
             </tr>
         </table>
     </form>
 </div>
-
+<script src="/static/tiny_mce/tiny_mce.js"></script>
+<script>
+tinyMCE.init({
+        'mode':'textareas',
+        'theme':'advanced',
+        'width':700,
+        'height':600,
+})
+</script>
 </body>
 </html>

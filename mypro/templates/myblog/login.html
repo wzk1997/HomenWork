@@ -20,6 +20,12 @@
                 <td>密码</td>
                 <td colspan="2"><input type="password" name="pwd"></td>
             </tr>
+            <tr align="center">
+                <td>
+                    <img src="/myblog/addutils/" alt="没有显示" onclick="refresh_check_code(this)" >
+                </td>
+                <td><input type="text" name="code" ></td>
+            </tr>
             <tr>
                 <td><input type="submit" value="登陆"></td>
             </tr>
@@ -28,6 +34,17 @@
 
     </form>
 </div>
+<script>
+     function refresh_check_code(node){
+     // src 后面加问号会自动刷新验证码 img 的 src
+     // get 请求方式缓存处理
+     node.src = '/myblog/addutils/?search=' + Math.random();
+    }
+
+</script>
+<script src="/static/js/lib/jquery/jquery-2.2.4.min.js">
+
+</script>
 
 </body>
 </html>

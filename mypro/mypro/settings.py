@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myblog',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,18 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS=[
+    os.path.join(BASE_DIR,'static')
+]
+
+
+
+
+#富文本编辑器
+TINYMCE_JS_URL = "/static/tiny_mce/tiny_mce.js"
+TINYMCE_JS_ROOT = "/static/tiny_mce/"
+TINYMCE_DEFAULT_CONFIG = {
+	'theme': "advanced",
+	 'width': 600,
+	 'height': 400,
+}

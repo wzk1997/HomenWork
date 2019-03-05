@@ -1,5 +1,5 @@
 from django.db import models
-
+from  tinymce.models import HTMLField
 
 class Management(models.Manager):
     def regulate(self, name, password):
@@ -22,8 +22,8 @@ class User(models.Model):
 class Article(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=20)
-    coutext = models.TextField()
-    author = models.TextField(User)
+    coutext = HTMLField()
+    author = models.ForeignKey(User)
 
     @classmethod
     def text(cls, title, coutext):
